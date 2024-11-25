@@ -1,22 +1,49 @@
-import React, { useState } from "react";
-import items from "../Data/Data.js";
+import React, { useState, useEffect } from "react";
+import items from "../Data/Data.js"; // Ensure this path and data are correct
 import { useLocation } from "react-router-dom";
 import { FaRupeeSign, FaShippingFast } from "react-icons/fa";
 import { BiSolidOffer } from "react-icons/bi";
-import { addToCart } from "../store/Slices/cartSlice.js";
+import { addToCart } from "../store/Slices/cartSlice.js"; // Ensure cartSlice is set up correctly in Redux
 import { useDispatch } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
   const path = useLocation();
-  const category = path.pathname;
-  const sliceCategory = category.split("/")[1];
-  const selectedItem = items.find((item) => item.id === Number(sliceCategory));
-  const [selectedImage, setSelectedImage] = useState(selectedItem.allimg[0]);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedImage, setSelectedImage] = useState("");
 
+  useEffect(() => {
+    // Extract category ID from the URL
+    const category = path.pathname.split("/")[1];
+    console.log("Extracted Category ID:", category);
+
+    // Find the item from the data
+    const item = items.find((item) => item.id === Number(category));
+    if (item) {
+      setSelectedItem(item);
+      setSelectedImage(item.allimg[0]); // Set default image
+    } else {
+      console.error("Item not found for ID:", category);
+    }
+  }, [path]);
+
+  // Handle image selection
   const handleImage = (image) => {
     setSelectedImage(image);
+  };
+
+  // Handle "Add to Cart"
+  const handleAddToCart = () => {
+    if (selectedItem) {
+      dispatch(addToCart(selectedItem));
+      toast.success("Item added to Cart");
+    }
+  };
+
+  // Handle "Buy Now"
+  const handleBuy = () => {
+    toast.success("Payment Gateway is not Active");
   };
 
   if (!selectedItem) {
@@ -26,11 +53,6 @@ const ProductDetails = () => {
       </p>
     );
   }
-
-  const handleAddToCart = (selectedItem) => {
-    dispatch(addToCart(selectedItem));
-    toast.success("Item added to Cart");
-  };
 
   return (
     <div className="w-[90%] mx-auto my-10 flex flex-wrap justify-center gap-10">
@@ -59,7 +81,7 @@ const ProductDetails = () => {
           </div>
 
           {/* Main Image Display */}
-          <div className="w-[400px] h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md">
+          <div className="w-[400px] max-sm:w-[280px] h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md">
             <img
               src={selectedImage}
               alt={selectedItem.title}
@@ -72,11 +94,14 @@ const ProductDetails = () => {
         <div className="flex gap-4 mt-5">
           <button
             className="px-8 py-3 bg-blue-800 text-white font-semibold rounded-md shadow-md hover:bg-blue-900 transition duration-300"
-            onClick={() => handleAddToCart(selectedItem)}
+            onClick={handleAddToCart}
           >
             Add To Cart
           </button>
-          <button className="px-8 py-3 bg-green-600 text-white font-semibold rounded-md shadow-md hover:bg-green-700 transition duration-300">
+          <button
+            className="px-8 py-3 bg-green-600 text-white font-semibold rounded-md shadow-md hover:bg-green-700 transition duration-300"
+            onClick={handleBuy}
+          >
             Buy Now
           </button>
         </div>
@@ -192,15 +217,3 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
-
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// // import items from "../Data/Data.js";
-
-// function ProductDetails() {
-//   const { id } = useParams();
-
-//   return <div>{id}</div>;
-// }
-
-// export default ProductDetails;

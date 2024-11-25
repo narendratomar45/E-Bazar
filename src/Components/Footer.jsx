@@ -7,13 +7,17 @@ import { FaFacebookF } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="bg-gray-800 text-white mt-10">
       <div className="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center">
         <div className=" w-32 h-32 rounded-full shadow-lg  max-sm:mx-auto">
-          <img src={logo} alt="logo" className="w-full h-full rounded-full" />
+          <Link to={"/"}>
+            {" "}
+            <img src={logo} alt="logo" className="w-full h-full rounded-full" />
+          </Link>
         </div>
         <div className="w-full sm:w-1/2 lg:w-1/3 mb-6 max-sm:mx-auto">
           <h2 className="text-xl font-semibold mb-4">
@@ -142,7 +146,7 @@ const Footer = () => {
 
       <hr className="border-gray-600 my-8" />
 
-      <div className="w-[90%] mx-auto flex max-sm:flex-col max-sm:gap-y-10 justify-around items-center mb-12">
+      <div className="w-[90%] mx-auto flex  max-sm:gap-y-10 justify-around items-center mb-12">
         <div className="flex items-center gap-2">
           <IoCall className="text-2xl" />
           <div>
@@ -158,7 +162,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex  space-x-5 text-2xl items-center">
+        <div className="flex space-x-5 text-2xl items-center">
           <FaFacebookF className="text-blue-600 hover:text-blue-800 transition" />
           <BsTwitterX className="text-blue-400 hover:text-blue-600 transition" />
           <FaInstagram className="text-pink-600 hover:text-pink-800 transition" />

@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "../Components/Carousel.jsx";
 import items from "../Data/Data.js";
-import ProductCard from "./ProductCard.jsx";
+import ProductCard from "../Components/ProductCard.jsx";
 import offer from "../assets/offer.avif";
 import { RiExchangeLine } from "react-icons/ri";
 import { FaHandHoldingHeart } from "react-icons/fa";

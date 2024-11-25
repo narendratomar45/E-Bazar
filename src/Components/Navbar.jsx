@@ -21,12 +21,12 @@ const Navbar = () => {
 
   useEffect(() => {
     dispatch(getCartTotal());
-  }, [cart]);
-
+  }, [cart, dispatch]);
+  console.log("cart", cartQuantity);
   useEffect(() => {
     dispatch(getWishlistTotal());
-  }, [wishlist]);
-
+  }, [wishlist, dispatch]);
+  console.log("wishlist", wishlistQuantity);
   const handleDropDown = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -81,10 +81,6 @@ const Navbar = () => {
             <span className="text-gray-500 group-hover:text-indigo-500 text-sm md:text-base lg:text-lg font-medium transition-transform duration-300 transform group-hover:scale-110 tracking-wide cursor-pointer">
               Login
             </span>
-
-            {/* <span className="hidden group-hover:block absolute top-full mt-1 bg-gray-800 text-white text-xs px-2 py-1 rounded shadow-md">
-              Profile
-            </span> */}
           </Link>
           <Link to="/signup" className="relative group max-sm:hidden">
             <span className="text-gray-500 group-hover:text-indigo-500 text-sm md:text-base lg:text-lg font-medium transition-transform duration-300 transform group-hover:scale-110 tracking-wide cursor-pointer">
@@ -98,7 +94,7 @@ const Navbar = () => {
               className="text-gray-500 group-hover:text-red-500 transition-transform duration-300 transform group-hover:scale-110"
             />
             {wishlistQuantity > 0 && (
-              <span className="absolute -top-2 -right-2 text-xs bg-red-600 text-white px-1.5 py-0.5 rounded-full shadow-md">
+              <span className="absolute  -top-2 -right-2 text-xs bg-red-600 text-white px-1.5 py-0.5 rounded-full shadow-md">
                 {wishlistQuantity}
               </span>
             )}

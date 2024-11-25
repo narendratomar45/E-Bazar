@@ -15,14 +15,14 @@ const ProductCard = ({ item, index }) => {
   };
   const handleAddToWishlist = (item) => {
     dispatch(addToWishlist(item));
-    toast.success("Item added to wishlist");
+    toast.success("Item added to wishlist",{ autoClose: 1000 });
   };
   return (
     <div
       key={index}
-      className="w-[270px] bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-indigo-600"
+      className="w-[270px] max-sm:w-[400px]  bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-indigo-600"
     >
-      <div className=" h-[300px] overflow-hidden ">
+      <div className=" h-[300px] max-sm:h-[400px] overflow-hidden  ">
         <Link to={`/${item.id}`}>
           <img
             src={item.image.src}

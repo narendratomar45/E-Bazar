@@ -11,6 +11,7 @@ import {
   getWishlistTotal,
   addToWishlist,
 } from "../store/Slices/cartSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 const Cart = () => {
   const { cart, wishlist, cartQuantity, cartPrice } = useSelector(
@@ -25,6 +26,13 @@ const Cart = () => {
   useEffect(() => {
     dispatch(getWishlistTotal());
   }, [wishlist]);
+
+  const HandleBuy = () => {
+    toast.success("Payement Gateway is not Active");
+  };
+  const handleremove = () =>{
+    toast.success("Item is removed")
+  }
 
   return (
     <div className="flex flex-col max-lg:flex-col lg:flex-row max-lg:items-center w-[90%] mx-auto gap-10 py-10">
@@ -59,7 +67,7 @@ const Cart = () => {
                     className="bg-red-500 hover:bg-red-600 text-white rounded-full p-2"
                     onClick={() => dispatch(removeCartItem(item.id))}
                   >
-                    <MdOutlineDeleteOutline className="text-xl" />
+                    <MdOutlineDeleteOutline className="text-xl" onClick={handleremove} />
                   </button>
                   <button
                     className="bg-yellow-400 hover:bg-yellow-500 text-white rounded-full p-2"
@@ -117,10 +125,14 @@ const Cart = () => {
           <p>Total Amount</p>
           <p>₹{cartPrice}</p>
         </div>
-        <button className="w-full py-2 mt-5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md shadow-lg">
+        <button
+          className="w-full py-2 mt-5 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md shadow-lg"
+          onClick={HandleBuy}
+        >
           Buy Now
         </button>
       </div>
+      <Toaster />
     </div>
   );
 };
