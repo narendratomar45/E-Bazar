@@ -34,7 +34,7 @@ const Home = () => {
     <div className="bg-gray-50 overflow-x-hidden">
       <Carousel />
 
-      <div className="w-full h-96 mt-6">
+      <div className="w-full h-96 max-sm:h-[135px] mt-6">
         <img
           src={offer}
           alt="offer"

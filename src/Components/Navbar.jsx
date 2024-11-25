@@ -88,7 +88,7 @@ const Navbar = () => {
             </span>
           </Link>
 
-          <Link to="/wishlist" className="relative group max-sm:hidden">
+          <Link to="/wishlist" className="relative group ">
             <FaRegHeart
               size={22}
               className="text-gray-500 group-hover:text-red-500 transition-transform duration-300 transform group-hover:scale-110"
@@ -104,7 +104,7 @@ const Navbar = () => {
           </Link>
 
           {/* Cart Icon */}
-          <Link to="/cart" className="relative group max-sm:hidden">
+          <Link to="/cart" className="relative group ">
             <CgShoppingCart
               size={24}
               className="text-gray-500 group-hover:text-green-500 transition-transform duration-300 transform group-hover:scale-110"
