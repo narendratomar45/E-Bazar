@@ -10,7 +10,7 @@ import Cart from "./Components/Cart";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Wishlist from "./Components/Wishlist";
-// import Category from "./pages/Category";
+import Category from "./pages/Category";
 import Scroll from "./Components/Scroll";
 import ProductDetails from "./Components/ProductDetails";
 
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="signup" element={<SignUp />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/:id" element={<ProductDetails />} />
-        {/* <Route path={`/${sliceCategory}`} element={<Category />} /> */}
+        <Route path={`/${sliceCategory}`} element={<Category />} />
       </Routes>
       <Footer />
     </div>

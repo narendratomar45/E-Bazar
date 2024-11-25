@@ -42,12 +42,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full h-10 bg-gradient-to-r from-purple-600 to-indigo-500 shadow-md text-center text-white flex items-center justify-center sticky top-0 z-10 max-sm:hidden">
+      <nav className="w-full h-8 bg-gradient-to-r from-purple-600 to-indigo-500 shadow-md text-center text-white flex items-center justify-center sticky top-0 z-10 max-sm:hidden">
         Login and Get 20% OFF!
       </nav>
 
-      <nav className="w-full h-20 flex justify-between items-center bg-white shadow-lg px-6 sticky top-10 z-50 max-sm:top-0">
-        <div className="flex items-center h-20 w-20">
+      <nav className="w-full h-16 flex justify-between items-center bg-white shadow-lg px-6 sticky top-8 z-50 max-sm:top-0">
+        <div className="flex items-center h-16 w-16">
           <Link to="/">
             <img
               src={logo}
@@ -57,18 +57,18 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="relative hidden md:flex items-center w-1/2">
+        <div className=" flex max-sm:hidden w-[500px] ml-28 ">
           <input
             type="text"
             placeholder="Search products, brands, categories..."
             className="w-[80%] py-2 pl-4 pr-12 rounded-full bg-gray-100 border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
           />
-          <button className="absolute left-[480px] text-gray-500 hover:text-indigo-600">
+          <button className=" text-gray-500 hover:text-indigo-600 -ml-8">
             <IoIosSearch size={20} />
           </button>
         </div>
 
-        <div className="flex items-center space-x-6 md:space-x-8 lg:space-x-10 mr-6 md:mr-12 ">
+        <div className=" flex items-center space-x-6 md:space-x-8 lg:space-x-10 mr-6 md:mr-12 ">
           <div className="w-10 h-10 flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-300 shadow-sm max-sm:hidden">
             <img
               src={indianFlag}
@@ -163,7 +163,7 @@ const Navbar = () => {
 
       {/* Category Links */}
 
-      <div className="max-sm:hidden md:flex justify-center items-center bg-gradient-to-r from-blue-600 to-indigo-500 text-white py-2 top-30 z-5">
+      <div className="max-sm:hidden md:flex justify-center items-center bg-gradient-to-r from-blue-600 to-indigo-500 text-white py-2 top-30 z-5 h-12">
         <ul className="flex space-x-14">
           <li>
             <Link
