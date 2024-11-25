@@ -15,7 +15,7 @@ const ProductCard = ({ item, index }) => {
   };
   const handleAddToWishlist = (item) => {
     dispatch(addToWishlist(item));
-    toast.success("Item added to wishlist",{ autoClose: 1000 });
+    toast.success("Item added to wishlist", { autoClose: 1000 });
   };
   return (
     <div
