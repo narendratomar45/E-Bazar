@@ -3,7 +3,7 @@ import items from "../Data/Data.js";
 import ProductCard from "../Components/ProductCard.jsx";
 import menSlider1 from "../assets/menSlider1.jpg";
 import menSlider2 from "../assets/menSlider2.avif";
-import menSlider3 from "../assets/menslider3.avif";
+import menSlider3 from "../assets/menSlider3.avif";
 import menSlider4 from "../assets/menSlider4.jpg";
 import Slider from "react-slick";
 import { RiExchangeLine } from "react-icons/ri";
