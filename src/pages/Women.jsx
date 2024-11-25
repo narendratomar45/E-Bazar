@@ -1,9 +1,9 @@
 import React from "react";
-import items from "../../Data/Data.js";
-import ProductCard from "../ProductCard";
-import womenSlider1 from "../../assets/womenSlider1.avif";
-import womenSlider2 from "../../assets/womenSlider2.jpg";
-import womenSlider3 from "../../assets/womenSlider3.jpg";
+import items from "../Data/Data.js";
+import ProductCard from "../Components/ProductCard.jsx";
+import womenSlider1 from "../assets/womenSlider1.avif";
+import womenSlider2 from "../assets/womenSlider2.jpg";
+import womenSlider3 from "../assets/womenSlider3.jpg";
 import Slider from "react-slick";
 import { RiExchangeLine } from "react-icons/ri";
 import { FaHandHoldingHeart } from "react-icons/fa";

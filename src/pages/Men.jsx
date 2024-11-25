@@ -1,10 +1,10 @@
 import React from "react";
-import items from "../../Data/Data.js";
-import ProductCard from "../ProductCard.jsx";
-import menSlider1 from "../../assets/menSlider1.jpg";
-import menSlider2 from "../../assets/menSlider2.avif";
-import menSlider3 from "../../assets/menslider3.avif";
-import menSlider4 from "../../assets/menSlider4.jpg";
+import items from "../Data/Data.js";
+import ProductCard from "../Components/ProductCard.jsx";
+import menSlider1 from "../assets/menSlider1.jpg";
+import menSlider2 from "../assets/menSlider2.avif";
+import menSlider3 from "../assets/menslider3.avif";
+import menSlider4 from "../assets/menSlider4.jpg";
 import Slider from "react-slick";
 import { RiExchangeLine } from "react-icons/ri";
 import { FaHandHoldingHeart } from "react-icons/fa";
@@ -56,7 +56,6 @@ const Men = () => {
         </div>
       </div>
       <div className="flex justify-center items-center my-5 gap-10 flex-wrap bg-white py-10 rounded-lg shadow-lg">
-
         <div className="w-80 h-auto flex flex-col items-center text-center">
           <RiExchangeLine className="text-6xl text-indigo-500 mb-4" />
           <span className="uppercase text-lg font-semibold text-gray-800">

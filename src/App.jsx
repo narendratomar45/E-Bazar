@@ -2,13 +2,13 @@ import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Men from "./Components/Category/Men";
-import Women from "./Components/Category/Women";
-import Kids from "./Components/Category/Kids";
+import Men from "./pages/Men";
+import Women from "./pages/Women";
+import Kids from "./pages/Kids";
 import Home from "./Components/Home";
 import Cart from "./Components/Cart";
-import SignUp from "./Components/Authentication/SignUp";
-import Login from "./Components/Authentication/Login";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 import Wishlist from "./Components/Wishlist";
 import Category from "./pages/Category";
 import Scroll from "./Components/Scroll";
@@ -18,7 +18,7 @@ const App = () => {
   const path = useLocation();
   const category = path.pathname;
   const sliceCategory = category.split("/")[1];
-  console.log(sliceCategory);
+  console.log("Slice category in App.jsx", sliceCategory);
 
   return (
     <div className=" bg-gray-200 text-black">
@@ -29,7 +29,6 @@ const App = () => {
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
-
         <Route path="/cart" element={<Cart />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />

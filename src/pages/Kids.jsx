@@ -1,10 +1,10 @@
 import React from "react";
-import items from "../../Data/Data.js";
-import ProductCard from "../ProductCard.jsx";
-import kidsSlider1 from "../../assets/kidsSlider1.jpg";
-import kidsSlider2 from "../../assets/kidsSlider2.avif";
-import kidsSlider3 from "../../assets/kidsSlider3.avif";
-import kidsSlider4 from "../../assets/kidsSlider4.avif";
+import items from "../Data/Data.js";
+import ProductCard from "../Components/ProductCard.jsx";
+import kidsSlider1 from "../assets/kidsSlider1.jpg";
+import kidsSlider2 from "../assets/kidsSlider2.avif";
+import kidsSlider3 from "../assets/kidsSlider3.avif";
+import kidsSlider4 from "../assets/kidsSlider4.avif";
 import Slider from "react-slick";
 import { RiExchangeLine } from "react-icons/ri";
 import { FaHandHoldingHeart } from "react-icons/fa";
