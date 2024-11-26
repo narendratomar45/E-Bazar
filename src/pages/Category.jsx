@@ -4,12 +4,12 @@ import ProductCard from "../Components/ProductCard.jsx";
 import { useLocation } from "react-router-dom";
 
 const Category = () => {
-  const path = useLocation();
-  const category = path.pathname;
-  console.log("Category",category);
+  const location = useLocation();
+  const category = location.pathname;
+  console.log("Category", category);
   const sliceCategory = category.split("/")[1];
   const filteredPath = items.filter((item) => item.category3 === sliceCategory);
-  console.log("filtered path in Category",filteredPath);
+  console.log("filtered path in Category", filteredPath);
 
   return (
     <div className=" flex flex-wrap justify-center items-center gap-10 my-10">

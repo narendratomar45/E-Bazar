@@ -14,6 +14,7 @@ import Category from "./pages/Category";
 import Scroll from "./Components/Scroll";
 import ProductDetails from "./Components/ProductDetails";
 
+
 const App = () => {
   const path = useLocation();
   const category = path.pathname;

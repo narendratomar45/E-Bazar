@@ -45,7 +45,7 @@ const Cart = () => {
           cart.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-md shadow-lg flex items-center gap-5 p-5 mb-5"
+              className="bg-white border border-gray-200 rounded-md shadow-lg flex max-sm:flex-col items-center gap-5 p-5 mb-5"
             >
               {/* Product Image */}
               <div className="w-40 h-40">
