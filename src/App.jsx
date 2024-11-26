@@ -14,7 +14,6 @@ import Category from "./pages/Category";
 import Scroll from "./Components/Scroll";
 import ProductDetails from "./Components/ProductDetails";
 
-
 const App = () => {
   const path = useLocation();
   const category = path.pathname;
@@ -34,8 +33,8 @@ const App = () => {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/:id" element={<ProductDetails />} />
-        <Route path={`/${sliceCategory}`} element={<Category />} />
+        <Route path="/items/:proId" element={<ProductDetails />} />
+        <Route path={`/:${sliceCategory}`} element={<Category />} />
       </Routes>
       <Footer />
     </div>

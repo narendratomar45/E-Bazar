@@ -5,10 +5,8 @@ import { useLocation } from "react-router-dom";
 
 const Category = () => {
   const location = useLocation();
-  const category = location.pathname;
-  console.log("Category", category);
-  const sliceCategory = category.split("/")[1];
-  const filteredPath = items.filter((item) => item.category3 === sliceCategory);
+  const category = location.pathname.split("/")[1];
+  const filteredPath = items.filter((item) => item.category3 == category);
   console.log("filtered path in Category", filteredPath);
 
   return (

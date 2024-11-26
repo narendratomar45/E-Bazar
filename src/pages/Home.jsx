@@ -34,11 +34,11 @@ const Home = () => {
     <div className="bg-gray-50 overflow-x-hidden">
       <Carousel />
 
-      <div className="w-full h-96 max-sm:h-[135px] mt-6">
+      <div className="w-full  max-sm:h-[135px] mt-6">
         <img
           src={offer}
           alt="offer"
-          className="w-full object-cover max-h-96 rounded-lg shadow-lg"
+          className="w-full h-full object-cover  rounded-lg shadow-lg"
         />
       </div>
 

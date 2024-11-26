@@ -1,32 +1,29 @@
 import React, { useState, useEffect } from "react";
-import items from "../Data/Data.js"; // Ensure this path and data are correct
-import { useLocation } from "react-router-dom";
+import items from "../Data/Data.js"; // 
+import { useParams } from "react-router-dom";
 import { FaRupeeSign, FaShippingFast } from "react-icons/fa";
 import { BiSolidOffer } from "react-icons/bi";
-import { addToCart } from "../store/Slices/cartSlice.js"; // Ensure cartSlice is set up correctly in Redux
+import { addToCart } from "../store/Slices/cartSlice.js"; // 
 import { useDispatch } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 
-const ProductDetails = () => {
+function ProductDetails() {
+  const { proId } = useParams();
   const dispatch = useDispatch();
-  const path = useLocation();
+
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedImage, setSelectedImage] = useState("");
 
+  // Fetch product details based on proId
   useEffect(() => {
-    // Extract category ID from the URL
-    const category = path.pathname.split("/")[1];
-    console.log("Extracted Category ID:", category);
-
-    // Find the item from the data
-    const item = items.find((item) => item.id === Number(category));
-    if (item) {
-      setSelectedItem(item);
-      setSelectedImage(item.allimg[0]); // Set default image
+    const product = items.find((item) => item.id === parseInt(proId));
+    if (product) {
+      setSelectedItem(product);
+      setSelectedImage(product.allimg[0]); // Set the default image
     } else {
-      console.error("Item not found for ID:", category);
+      console.error("Product not found for ID:", proId);
     }
-  }, [path]);
+  }, [proId]);
 
   // Handle image selection
   const handleImage = (image) => {
@@ -48,9 +45,9 @@ const ProductDetails = () => {
 
   if (!selectedItem) {
     return (
-      <p className="text-center font-bold text-3xl text-orange-500">
-        Item not found
-      </p>
+      <div className="w-full flex justify-center items-center my-10">
+        <h1 className="text-2xl font-bold text-gray-800">Product not found!</h1>
+      </div>
     );
   }
 
@@ -214,6 +211,6 @@ const ProductDetails = () => {
       <Toaster />
     </div>
   );
-};
+}
 
 export default ProductDetails;
