@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import items from "../Data/Data.js"; // 
+import items from "../Data/Data.js"; //
 import { useParams } from "react-router-dom";
 import { FaRupeeSign, FaShippingFast } from "react-icons/fa";
 import { BiSolidOffer } from "react-icons/bi";
-import { addToCart } from "../store/Slices/cartSlice.js"; // 
+import { addToCart } from "../store/Slices/cartSlice.js"; //
 import { useDispatch } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -56,8 +56,8 @@ function ProductDetails() {
       {/* Left Section: Image Selector */}
       <div className="w-[500px] max-sm:w-full flex flex-col items-center">
         {/* Image Selector */}
-        <div className="flex gap-5">
-          <div className="flex flex-col gap-3">
+        <div className="w-[90%] mx-auto flex max-sm:flex-col-reverse gap-5">
+          <div className=" w-[90%] mx-auto flex flex-col max-sm:flex-row-reverse gap-3">
             {selectedItem.allimg.map((image, index) => (
               <div
                 key={index}
@@ -132,7 +132,7 @@ function ProductDetails() {
         </div>
 
         {/* Sizes */}
-        <div className="mt-5">
+        <div className="mt-5 ">
           <p className="text-lg font-semibold">Available Sizes</p>
           <div className="flex gap-3 mt-3">
             {["S", "M", "L", "XL", "XXL"].map((size) => (
