@@ -57,20 +57,20 @@ const Cart = () => {
               </div>
 
               {/* Product Details */}
-              <div className="flex-1">
+              <div className="flex-1 text-center">
                 <p className="text-lg font-semibold text-gray-800 mb-2">
                   {item.title}
                 </p>
                 <p className="text-gray-600 mb-4">Size: {item.size}</p>
-                <div className="flex gap-4">
+                <div className="flex gap-4 text-center justify-center">
                   <button
-                    className="bg-red-500 hover:bg-red-600 text-white rounded-full p-2"
+                    className="bg-red-500 hover:bg-red-600 text-white rounded-full p-2 "
                     onClick={() => dispatch(removeCartItem(item.id))}
                   >
                     <MdOutlineDeleteOutline className="text-xl" onClick={handleremove} />
                   </button>
                   <button
-                    className="bg-yellow-400 hover:bg-yellow-500 text-white rounded-full p-2"
+                    className="bg-yellow-400 hover:bg-yellow-500 text-white rounded-full p-2 "
                     onClick={() => dispatch(addToWishlist(item))}
                   >
                     <FaRegHeart className="text-xl" />
