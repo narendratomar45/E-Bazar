@@ -15,12 +15,44 @@ const Home = () => {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
     speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 4,
+    autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: "linear",
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
   };
 
   const filteredProduct = items.filter((item) => item.category2 === "Home");
@@ -41,11 +73,12 @@ const Home = () => {
       <h1 className="text-4xl md:text-5xl text-center my-10 font-bold text-gray-800">
         Season&apos;s Deal, Only A Click Away!
       </h1>
+
       <Slider {...settings}>
         {/* <div className="w-full min-h-[500px] flex flex-wrap p-10 justify-center items-center gap-10 rounded-lg shadow-lg"> */}
-        {filteredProduct.map((item, index) => (
-          <ProductCard item={item} index={index} key={index} />
-        ))}
+          {filteredProduct.map((item, index) => (
+            <ProductCard item={item} index={index} key={index} />
+          ))}
         {/* </div> */}
       </Slider>
 

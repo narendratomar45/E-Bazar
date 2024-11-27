@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import items from "../Data/Data.js"; //
 import { useParams } from "react-router-dom";
 import { FaRupeeSign, FaShippingFast } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa6";
 import { BiSolidOffer } from "react-icons/bi";
 import { addToCart } from "../store/Slices/cartSlice.js"; //
 import { useDispatch } from "react-redux";
@@ -78,12 +79,15 @@ function ProductDetails() {
           </div>
 
           {/* Main Image Display */}
-          <div className="w-[1200px] max-sm:w-[80%] max-sm:mx-auto h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md transform transition-all duration-300 hover:scale-110">
+          <div className="relative w-[1200px] max-sm:w-[80%] max-sm:mx-auto h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md transform transition-all duration-300 hover:scale-110 ">
             <img
               src={selectedImage}
               alt={selectedItem.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
             />
+            <div className="absolute bg-indigo-500 p-3 rounded-full z-50 left-[90%] top-[10%] transform -translate-x-[50%] -translate-y-[50%]">
+              <FaRegHeart className="text-white text-3xl" />
+            </div>
           </div>
         </div>
 

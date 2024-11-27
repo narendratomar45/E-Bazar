@@ -13,6 +13,7 @@ import Wishlist from "./Components/Wishlist";
 import Category from "./pages/Category";
 import Scroll from "./Components/Scroll";
 import ProductDetails from "./Components/ProductDetails";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const path = useLocation();
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <div className=" bg-gray-200 text-black">
       <Navbar />
+      <Toaster />
       <Scroll />
       <Routes>
         <Route path="/" element={<Home />} />

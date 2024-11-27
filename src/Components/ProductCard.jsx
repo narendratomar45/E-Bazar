@@ -5,24 +5,26 @@ import { Link } from "react-router-dom";
 import { addToCart } from "../store/Slices/cartSlice";
 import { addToWishlist } from "../store/Slices/cartSlice";
 import { useDispatch } from "react-redux";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const ProductCard = ({ item, index }) => {
   const dispatch = useDispatch();
-  const handleAddToCart = (item) => {
-    dispatch(addToCart(item));
+
+  const handleAddToCart = () => {
     toast.success("Item added to Cart", { autoClose: 1000 });
+    dispatch(addToCart(item));
   };
   const handleAddToWishlist = (item) => {
-    dispatch(addToWishlist(item));
     toast.success("Item added to wishlist", { autoClose: 1000 });
+    dispatch(addToWishlist(item));
   };
+
   return (
     <div
       key={index}
-      className="w-[270px] max-sm:w-[400px] mx-auto  bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-indigo-600 transform  "
+      className="w-[270px] max-sm:w-[360px] mx-auto  bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-indigo-600 transform  "
     >
-      <div className="  h-[340px] max-sm:h-[400px] overflow-hidden  ">
+      <div className="  h-[300px] max-sm:h-[400px] overflow-hidden  ">
         <Link to={"/items" + `/${item.id}`}>
           <img
             src={item.image.src}
@@ -54,12 +56,12 @@ const ProductCard = ({ item, index }) => {
           >
             Add To Cart
           </button>
+
           <h1 className="text-xl font-semibold text-gray-900">
             Rs. {item.price}
           </h1>
         </div>
       </div>
-      <Toaster />
     </div>
   );
 };
