@@ -40,7 +40,7 @@ const Kids = () => {
       <h1 className="text-4xl md:text-5xl text-center my-10 font-bold text-gray-800">
         For Your Childeren&apos;s Jingles!
       </h1>
-      <div className="min-h-[500px] p-12 w-full bg-pink-100 flex justify-center items-center">
+      <div className="min-h-[500px] p-12 w-full  flex justify-center items-center">
         <div className="w-[100%] flex justify-center flex-wrap mx-auto gap-10">
           {filteredProduct.map((item, index) => (
             <ProductCard item={item} key={index} />

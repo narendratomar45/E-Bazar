@@ -43,21 +43,36 @@ const Footer = () => {
           <p className="text-gray-300 mb-4">
             Shop our products and offers on-the-go.
           </p>
-          <div className="flex space-x-4">
-            <div className="flex items-center border border-gray-600 text-white bg-black p-3 rounded-md w-48">
-              <TbBrandApple className="text-3xl" />
-              <div className="ml-3">
-                <p className="text-sm">Download on the</p>
-                <h3 className="font-semibold text-lg">App Store</h3>
+          <div className="w-[full] max-sm:w-[80%]  flex flex-wrap mx-auto gap-x-4">
+            <a
+              href="https://www.apple.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Facebbok"
+            >
+              <div className="flex items-center border border-gray-600 text-white bg-black p-3 rounded-md w-48">
+                <TbBrandApple className="text-3xl" />
+                <div className="ml-3">
+                  <p className="text-sm">Download on the</p>
+                  <h3 className="font-semibold text-lg">App Store</h3>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center border border-gray-600 text-white bg-black p-3 rounded-md w-48">
-              <FaGooglePlay className="text-3xl" />
-              <div className="ml-3">
-                <p className="text-sm">Get it on</p>
-                <h3 className="font-semibold text-lg">Google Play</h3>
+            </a>
+
+            <a
+              href="https://play.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Facebbok"
+            >
+              <div className="flex items-center border border-gray-600 text-white bg-black p-3 rounded-md w-48">
+                <FaGooglePlay className="text-3xl" />
+                <div className="ml-3">
+                  <p className="text-sm">Get it on</p>
+                  <h3 className="font-semibold text-lg">Google Play</h3>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -163,9 +178,30 @@ const Footer = () => {
         </div>
 
         <div className="flex space-x-5 text-2xl items-center">
-          <FaFacebookF className="text-blue-600 hover:text-blue-800 transition" />
-          <BsTwitterX className="text-blue-400 hover:text-blue-600 transition" />
-          <FaInstagram className="text-pink-600 hover:text-pink-800 transition" />
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Facebbok"
+          >
+            <FaFacebookF className="text-blue-600 hover:text-blue-800 transition" />
+          </a>
+          <a
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Facebbok"
+          >
+            <BsTwitterX className="text-blue-400 hover:text-blue-600 transition" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Facebbok"
+          >
+            <FaInstagram className="text-pink-600 hover:text-pink-800 transition" />
+          </a>
         </div>
       </div>
 

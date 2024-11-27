@@ -78,7 +78,7 @@ function ProductDetails() {
           </div>
 
           {/* Main Image Display */}
-          <div className="w-[400px] max-sm:w-[280px] h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md">
+          <div className="w-[1200px] max-sm:w-[280px] h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md">
             <img
               src={selectedImage}
               alt={selectedItem.title}

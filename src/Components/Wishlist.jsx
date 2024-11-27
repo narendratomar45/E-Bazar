@@ -1,10 +1,21 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeWishlistItem } from "../store/Slices/cartSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 const Wishlist = () => {
   const wishlist = useSelector((state) => state.cartSlice.wishlist);
   const dispatch = useDispatch();
+
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+    toast.success("Item added to Cart");
+  };
+
+  const handleremoveWishlist = (item) => {
+    dispatch(removeWishlistItem(item));
+    toast.success("Item is removed");
+  };
 
   return (
     <div className="w-[80%] mx-auto py-10">
@@ -46,13 +57,13 @@ const Wishlist = () => {
               <div className="flex flex-col gap-3 md:ml-6">
                 <button
                   className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md font-medium w-40"
-                  onClick={() => dispatch(addToCart(item))}
+                  onClick={() => handleAddToCart(item)}
                 >
                   Add to Cart
                 </button>
                 <button
                   className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md font-medium w-40"
-                  onClick={() => dispatch(removeWishlistItem(item.id))}
+                  onClick={() => handleremoveWishlist(item.id)}
                 >
                   Remove
                 </button>
@@ -61,6 +72,7 @@ const Wishlist = () => {
           ))}
         </div>
       )}
+      <Toaster />
     </div>
   );
 };

@@ -46,7 +46,7 @@ const Home = () => {
       <h1 className="text-4xl md:text-5xl text-center my-10 font-bold text-gray-800">
         Season&apos;s Deal, Only A Click Away!
       </h1>
-      <div className="w-full min-h-[500px] bg-gradient-to-r from-purple-500 to-purple-700 flex flex-wrap p-10 justify-center items-center gap-10 rounded-lg shadow-lg">
+      <div className="w-full min-h-[500px] flex flex-wrap p-10 justify-center items-center gap-10 rounded-lg shadow-lg">
         {filteredProduct.map((item, index) => (
           <ProductCard item={item} index={index} key={index} />
         ))}

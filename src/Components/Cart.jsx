@@ -14,7 +14,7 @@ import {
 import toast, { Toaster } from "react-hot-toast";
 
 const Cart = () => {
-  const { cart, wishlist, cartQuantity, cartPrice } = useSelector(
+  const { cart, cartQuantity, cartPrice } = useSelector(
     (state) => state.cartSlice
   );
   const dispatch = useDispatch();
@@ -23,16 +23,17 @@ const Cart = () => {
     dispatch(getCartTotal());
   }, [cart]);
 
-  useEffect(() => {
-    dispatch(getWishlistTotal());
-  }, [wishlist]);
+  const handleWishlist = (item) => {
+    dispatch(getWishlistTotal(item));
+    toast.success("Item added to Wishlist");
+  };
 
   const HandleBuy = () => {
     toast.success("Payement Gateway is not Active");
   };
-  const handleremove = () =>{
-    toast.success("Item is removed")
-  }
+  const handleremove = () => {
+    toast.success("Item is removed");
+  };
 
   return (
     <div className="flex flex-col max-lg:flex-col lg:flex-row max-lg:items-center w-[90%] mx-auto gap-10 py-10">
@@ -67,13 +68,19 @@ const Cart = () => {
                     className="bg-red-500 hover:bg-red-600 text-white rounded-full p-2 "
                     onClick={() => dispatch(removeCartItem(item.id))}
                   >
-                    <MdOutlineDeleteOutline className="text-xl" onClick={handleremove} />
+                    <MdOutlineDeleteOutline
+                      className="text-xl"
+                      onClick={handleremove}
+                    />
                   </button>
                   <button
                     className="bg-yellow-400 hover:bg-yellow-500 text-white rounded-full p-2 "
                     onClick={() => dispatch(addToWishlist(item))}
                   >
-                    <FaRegHeart className="text-xl" />
+                    <FaRegHeart
+                      className="text-xl"
+                      onClick={() => handleWishlist(item)}
+                    />
                   </button>
                 </div>
               </div>

@@ -40,15 +40,9 @@ const Men = () => {
       <h1 className="text-4xl md:text-5xl text-center my-10 font-bold text-gray-800">
         Deals To Keep You Warm
       </h1>
-      {/* <div className="flex justify-center mx-auto my-10 w-[60%] h-[300px] max-sm:w-[90%] max-sm:h-[200px] ">
-        <img
-          src="https://img.freepik.com/premium-photo/shopping-traditional-clothing-store-india-concept-traditional-clothing-indian-fashion-shopping-experience-ethnic-wear-unique-finds_864588-199599.jpg?w=1380"
-          alt="Men Shopping Banner"
-          className="w-full h-full rounded"
-        />
-      </div> */}
+      
 
-      <div className="bg-indigo-400 min-h-[500px] p-12 w-full flex justify-center items-center">
+      <div className=" min-h-[500px] p-12 w-full flex justify-center items-center">
         <div className="w-[100%] flex justify-center flex-wrap mx-auto gap-10">
           {filteredProduct.map((item, index) => (
             <ProductCard item={item} key={index} />

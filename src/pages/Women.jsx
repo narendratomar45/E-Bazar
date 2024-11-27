@@ -38,14 +38,8 @@ const Women = () => {
       <h1 className="text-4xl md:text-5xl text-center my-10 font-bold text-gray-800">
         A GIRL&apos;S GOT TO HAVE OPTIONS
       </h1>
-      {/* <div className="flex justify-center mx-auto my-10 w-[60%] h-[300px] max-sm:w-[90%] max-sm:h-[200px]">
-        <img
-          src="https://img.freepik.com/premium-photo/young-indian-woman-holding-shopping-bags-indoor-shot_657790-30059.jpg?ga=GA1.2.547216132.1720331701&semt=ais_hybrid"
-          alt="Women shoping banner"
-          className="w-full h-full rounded"
-        />
-      </div> */}
-      <div className="w-full min-h-[500px] flex justify-center items-center bg-purple-500 p-12">
+      
+      <div className="w-full min-h-[500px] flex justify-center items-center  p-12">
         <div className="w-[100%] flex justify-center mx-auto flex-wrap gap-10 ">
           {filteredProduct.map((item, index) => (
             <ProductCard item={item} key={index} />
