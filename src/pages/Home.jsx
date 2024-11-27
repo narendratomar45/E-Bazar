@@ -9,25 +9,20 @@ import { MdAssuredWorkload } from "react-icons/md";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import mobiquik from "../assets/mobiquik.avif";
-import paytm from "../assets/paytm.avif";
-import phonpay from "../assets/phonpay.avif";
+import PaymentScroll from "../Components/paymentScroll.jsx";
+
 const Home = () => {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     speed: 500,
     autoplaySpeed: 2000,
     cssEase: "linear",
   };
-  const images = [
-    { id: 1, src: mobiquik, alt: "mobiquik" },
-    { id: 2, src: paytm, alt: "paytm" },
-    { id: 3, src: phonpay, alt: "phonpay" },
-  ];
+
   const filteredProduct = items.filter((item) => item.category2 === "Home");
 
   return (
@@ -46,11 +41,13 @@ const Home = () => {
       <h1 className="text-4xl md:text-5xl text-center my-10 font-bold text-gray-800">
         Season&apos;s Deal, Only A Click Away!
       </h1>
-      <div className="w-full min-h-[500px] flex flex-wrap p-10 justify-center items-center gap-10 rounded-lg shadow-lg">
+      <Slider {...settings}>
+        {/* <div className="w-full min-h-[500px] flex flex-wrap p-10 justify-center items-center gap-10 rounded-lg shadow-lg"> */}
         {filteredProduct.map((item, index) => (
           <ProductCard item={item} index={index} key={index} />
         ))}
-      </div>
+        {/* </div> */}
+      </Slider>
 
       <div className="flex justify-center items-center my-5 gap-20 flex-wrap bg-white py-10 rounded-lg shadow-lg">
         <div className="w-60 h-auto flex flex-col items-center text-center">
@@ -74,17 +71,7 @@ const Home = () => {
           </span>
         </div>
       </div>
-      <Slider {...settings} className=" my-10 rounded-lg shadow-lg">
-        {images.map((image, index) => (
-          <div key={index}>
-            <img
-              src={image.src}
-              alt={image.alt}
-              className=" w-full h-full object-fill"
-            />
-          </div>
-        ))}
-      </Slider>
+      <PaymentScroll />
     </div>
   );
 };
