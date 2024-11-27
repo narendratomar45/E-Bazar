@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+    <div className="min-h-screen max-sm:w-[90%] mx-auto flex items-center justify-center">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-105">
         {/* Header */}
         <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-8">
@@ -118,3 +118,4 @@ const Login = () => {
 };
 
 export default Login;
+

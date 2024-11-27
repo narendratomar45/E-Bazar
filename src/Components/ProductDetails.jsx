@@ -56,12 +56,12 @@ function ProductDetails() {
       {/* Left Section: Image Selector */}
       <div className="w-[500px] max-sm:w-full flex flex-col items-center">
         {/* Image Selector */}
-        <div className="w-[90%] mx-auto flex max-sm:flex-col-reverse gap-5">
-          <div className=" w-[90%] mx-auto flex flex-col max-sm:flex-row-reverse gap-3">
+        <div className="w-full mx-auto flex max-sm:flex-col-reverse gap-5">
+          <div className=" w-[90%] max-sm:w-[80%] mx-auto flex flex-col max-sm:flex-row-reverse gap-3">
             {selectedItem.allimg.map((image, index) => (
               <div
                 key={index}
-                className={`w-20 h-24 border-2 ${
+                className={`w-20 h-24 max-sm:h-20 border-2 ${
                   selectedImage === image
                     ? "border-blue-800"
                     : "border-gray-300"
@@ -78,7 +78,7 @@ function ProductDetails() {
           </div>
 
           {/* Main Image Display */}
-          <div className="w-[1200px] max-sm:w-[280px] h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md">
+          <div className="w-[1200px] max-sm:w-[80%] max-sm:mx-auto h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md">
             <img
               src={selectedImage}
               alt={selectedItem.title}

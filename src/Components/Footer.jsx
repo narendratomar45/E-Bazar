@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-800 text-white mt-10">
+    <div className="bg-gray-800 text-white ">
       <div className="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center">
         <div className=" w-32 h-32 rounded-full shadow-lg  max-sm:mx-auto">
           <Link to={"/"}>
