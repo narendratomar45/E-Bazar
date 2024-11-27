@@ -18,7 +18,7 @@ const Wishlist = () => {
   };
 
   return (
-    <div className="w-[80%] mx-auto py-10">
+    <div className="w-[80%] max-sm:w-full mx-auto py-10">
       {/* Wishlist Heading */}
       <h1 className="text-2xl font-bold text-gray-800 text-center my-5">
         Your Wishlist
