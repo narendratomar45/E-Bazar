@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full sm:w-1/2 lg:w-1/3 mb-6">
+        <div className="w-full sm:w-1/2 lg:w-1/3 mb-6 ml-10">
           <h2 className="text-xl font-semibold mb-4">Download our apps</h2>
           <p className="text-gray-300 mb-4">
             Shop our products and offers on-the-go.
