@@ -50,10 +50,10 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Visit Facebbok"
             >
-              <div className="flex items-center border border-gray-600 text-white bg-black p-3 rounded-md w-48">
+              <div className="flex  items-center border border-gray-600 text-white bg-black p-3 rounded-md w-48">
                 <TbBrandApple className="text-3xl" />
                 <div className="ml-3">
-                  <p className="text-sm">Download on the</p>
+                  <p className="text-sm ">Download on the</p>
                   <h3 className="font-semibold text-lg">App Store</h3>
                 </div>
               </div>

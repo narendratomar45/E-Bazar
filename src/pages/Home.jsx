@@ -52,22 +52,22 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="flex justify-center items-center my-5 gap-10 flex-wrap bg-white py-10 rounded-lg shadow-lg">
-        <div className="w-80 h-auto flex flex-col items-center text-center">
+      <div className="flex justify-center items-center my-5 gap-20 flex-wrap bg-white py-10 rounded-lg shadow-lg">
+        <div className="w-60 h-auto flex flex-col items-center text-center">
           <RiExchangeLine className="text-6xl text-purple-600 mb-4" />
           <span className="uppercase text-lg font-semibold text-gray-800">
             Easy Exchange
           </span>
         </div>
 
-        <div className="w-80 h-auto flex flex-col items-center text-center">
+        <div className="w-60 h-auto flex flex-col items-center text-center">
           <FaHandHoldingHeart className="text-6xl text-purple-600 mb-4" />
           <span className="uppercase text-lg font-semibold text-gray-800">
             100% Handpicked
           </span>
         </div>
 
-        <div className="w-80 h-auto flex flex-col items-center text-center">
+        <div className="w-60 h-auto flex flex-col items-center text-center">
           <MdAssuredWorkload className="text-6xl text-purple-600 mb-4" />
           <span className="uppercase text-lg font-semibold text-gray-800">
             Assured Quality

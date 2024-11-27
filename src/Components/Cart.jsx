@@ -38,7 +38,7 @@ const Cart = () => {
   return (
     <div className="flex flex-col max-lg:flex-col lg:flex-row max-lg:items-center w-[90%] mx-auto gap-10 py-10">
       {/* Cart Items Section */}
-      <div className="lg:w-[65%] w-full">
+      <div className="lg:w-[65%] w-full ">
         <div className="text-center bg-white border border-gray-200 rounded-md shadow-lg p-4 font-semibold text-gray-800 mb-5">
           Cart - {cart.length} items
         </div>
@@ -46,14 +46,14 @@ const Cart = () => {
           cart.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-md shadow-lg flex max-sm:flex-col items-center gap-5 p-5 mb-5"
+              className="bg-white border border-gray-200 rounded-md shadow-lg flex max-sm:flex-col items-center gap-5 p-5 mb-5 transform transition-all duration-300 hover:scale-105"
             >
               {/* Product Image */}
-              <div className="w-40 h-40">
+              <div className="w-40 h-52 border-2 border-indigo-500 rounded">
                 <img
                   src={item.image?.src}
                   alt={item.image?.alt}
-                  className="w-full h-full object-cover rounded-md"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
