@@ -9,7 +9,7 @@ import { MdAssuredWorkload } from "react-icons/md";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PaymentScroll from "../Components/paymentScroll.jsx";
+import PaymentScroll from "../Components/PaymentScroll.jsx";
 
 const Home = () => {
   const settings = {
@@ -76,9 +76,9 @@ const Home = () => {
 
       <Slider {...settings}>
         {/* <div className="w-full min-h-[500px] flex flex-wrap p-10 justify-center items-center gap-10 rounded-lg shadow-lg"> */}
-          {filteredProduct.map((item, index) => (
-            <ProductCard item={item} index={index} key={index} />
-          ))}
+        {filteredProduct.map((item, index) => (
+          <ProductCard item={item} index={index} key={index} />
+        ))}
         {/* </div> */}
       </Slider>
 
