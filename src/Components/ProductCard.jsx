@@ -22,7 +22,7 @@ const ProductCard = ({ item, index }) => {
   return (
     <div
       key={index}
-      className="w-[270px] max-sm:w-[360px] mx-auto  bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-indigo-600 transform  "
+      className="w-[270px] max-sm:w-[80%] mx-auto  bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-indigo-600 transform  "
     >
       <div className="  h-[300px] max-sm:h-[400px] overflow-hidden  ">
         <Link to={"/items" + `/${item.id}`}>

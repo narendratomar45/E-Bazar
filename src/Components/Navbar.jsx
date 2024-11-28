@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
 
         <div className=" flex items-center space-x-6 md:space-x-8 lg:space-x-10 mr-6 md:mr-12 ">
-          <div className="w-10 h-10 flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-300 shadow-sm max-sm:hidden">
+          <div className="w-10 h-10 flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-300 shadow-sm max-sm:hidden hover:scale-105">
             <img
               src={indianFlag}
               alt="Indian Flag"

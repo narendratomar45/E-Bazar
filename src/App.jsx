@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -14,8 +14,16 @@ import Category from "./pages/Category";
 import Scroll from "./Components/Scroll";
 import ProductDetails from "./Components/ProductDetails";
 import { Toaster } from "react-hot-toast";
+import Loading from "./Components/Loading";
 
 const App = () => {
+  const [shimmer, setShimmer] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setShimmer(false), 500);
+  }, []);
+  if (shimmer) {
+    return <Loading />;
+  }
   const path = useLocation();
   const category = path.pathname;
   const sliceCategory = category.split("/")[1];

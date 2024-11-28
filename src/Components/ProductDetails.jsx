@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { FaRupeeSign, FaShippingFast } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import { BiSolidOffer } from "react-icons/bi";
-import { addToCart } from "../store/Slices/cartSlice.js"; //
+import { addToCart, addToWishlist } from "../store/Slices/cartSlice.js"; //
 import { useDispatch } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -36,6 +36,13 @@ function ProductDetails() {
     if (selectedItem) {
       dispatch(addToCart(selectedItem));
       toast.success("Item added to Cart");
+    }
+  };
+
+  const handleWishlist = () => {
+    if (selectedItem) {
+      dispatch(addToWishlist(selectedItem));
+      toast.success("Item is added to Wishlist");
     }
   };
 
@@ -85,7 +92,10 @@ function ProductDetails() {
               alt={selectedItem.title}
               className="w-full h-full object-cover "
             />
-            <div className="absolute bg-indigo-500 p-3 rounded-full z-50 left-[90%] top-[10%] transform -translate-x-[50%] -translate-y-[50%]">
+            <div
+              className="absolute bg-indigo-500 p-3 rounded-full z-50 left-[90%] top-[10%] transform -translate-x-[50%] -translate-y-[50%]"
+              onClick={handleWishlist}
+            >
               <FaRegHeart className="text-white text-3xl" />
             </div>
           </div>
