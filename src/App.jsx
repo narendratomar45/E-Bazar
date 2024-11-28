@@ -17,11 +17,11 @@ import { Toaster } from "react-hot-toast";
 import Loading from "./Components/Loading";
 
 const App = () => {
-  const [shimmer, setShimmer] = useState(true);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setShimmer(false), 500);
+    setTimeout(() => setLoading(false), 500);
   }, []);
-  if (shimmer) {
+  if (loading) {
     return <Loading />;
   }
   const path = useLocation();

@@ -29,11 +29,11 @@ const Wishlist = () => {
           No items in wishlist
         </p>
       ) : (
-        <div className="space-y-6 px-6 transform transition-all  duration-200 hover:scale-105">
+        <div className="space-y-6 px-6 ">
           {wishlist.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-md shadow-lg p-5"
+              className="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-md shadow-lg p-5 transform transition-all  duration-200 hover:scale-105"
             >
               {/* Product Image */}
               <div className="w-48 h-52 max-sm:h-64 flex-shrink-0 mb-4 md:mb-0 md:mr-6">

@@ -18,7 +18,7 @@ export const cartSlice = createSlice({
     addToCart: (state, action) => {
       let find = state.cart.findIndex((item) => item.id === action.payload.id);
       if (find >= 0) {
-        if (state.cart[find].quantity < 5) {
+        if (state.cart[find].quantity < 1) {
           state.cart[find].quantity += 1;
         }
       } else {
@@ -35,7 +35,7 @@ export const cartSlice = createSlice({
         (item) => item.id === action.payload.id
       );
       if (find >= 0) {
-        if (state.wishlist[find].quantity < 5) {
+        if (state.wishlist[find].quantity < 1) {
           state.wishlist[find].quantity += 1;
         }
       } else {

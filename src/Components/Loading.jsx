@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
 
-
 function Loading() {
   return (
     <div className="flex-col gap-4 w-full flex items-center justify-center transform transition-all duration-1000 ">

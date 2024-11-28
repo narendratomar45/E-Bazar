@@ -48,7 +48,7 @@ function ProductDetails() {
 
   // Handle "Buy Now"
   const handleBuy = () => {
-    toast.success("Payment Gateway is not Active");
+    toast.error("Payment Gateway is not Active");
   };
 
   if (!selectedItem) {
@@ -86,11 +86,11 @@ function ProductDetails() {
           </div>
 
           {/* Main Image Display */}
-          <div className="relative w-[1200px] max-sm:w-[80%] max-sm:mx-auto h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md transform transition-all duration-300 hover:scale-110 ">
+          <div className="relative w-[1200px] max-sm:w-[80%] max-sm:mx-auto h-[417px] border border-gray-300 rounded-md overflow-hidden shadow-md   ">
             <img
               src={selectedImage}
               alt={selectedItem.title}
-              className="w-full h-full object-cover "
+              className="w-full h-full object-cover transform transition-all duration-300 hover:scale-110  "
             />
             <div
               className="absolute bg-indigo-500 p-3 rounded-full z-50 left-[90%] top-[10%] transform -translate-x-[50%] -translate-y-[50%]"

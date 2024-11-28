@@ -64,13 +64,13 @@ const Home = () => {
       <div className="w-full  max-sm:h-[135px] mt-6">
         <img
           src={offer}
-          alt="offer"
+          alt="offer image"
           className="w-full h-full object-cover  rounded-lg shadow-lg"
         />
       </div>
 
       {/* Season's Deal */}
-      <h1 className="text-4xl md:text-5xl text-center my-10 font-bold text-gray-800">
+      <h1 className="text-4xl max-sm:text-2xl md:text-5xl text-center my-5 font-bold text-gray-800">
         Season&apos;s Deal, Only A Click Away!
       </h1>
 

@@ -31,7 +31,7 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   const handleHome = () => {
-    toast.success("Item is not added yet");
+    toast.error("Item is not added yet");
   };
 
   const uniqueCategories = Array.from(
