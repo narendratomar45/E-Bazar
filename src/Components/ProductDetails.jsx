@@ -93,7 +93,7 @@ function ProductDetails() {
               className="w-full h-full object-cover transform transition-all duration-300 hover:scale-110  "
             />
             <div
-              className="absolute bg-indigo-500 p-3 rounded-full z-50 left-[90%] top-[10%] transform -translate-x-[50%] -translate-y-[50%]"
+              className="absolute bg-green-600 p-2 rounded-full z-50 left-[90%] max-sm:left-[85%] top-[8%] transform -translate-x-[50%] -translate-y-[50%] cursor-pointer"
               onClick={handleWishlist}
             >
               <FaRegHeart className="text-white text-3xl" />
