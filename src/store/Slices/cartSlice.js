@@ -6,7 +6,7 @@ export const initialState = {
   wishlist: [],
   items: productdata,
   cartQuantity: 0,
-  wishlistQuanity: 0,
+  wishlistQuantity: 0,
   cartPrice: 0,
   wishlistPrice: 0,
 };
@@ -75,8 +75,8 @@ export const cartSlice = createSlice({
           return cartTotal;
         },
         {
-          totalPrice: 0,
           totalQuantity: 0,
+          totalPrice: 0,
         }
       );
       state.cartPrice = parseInt(totalPrice.toFixed(2));

@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Wishlist = () => {
   const wishlist = useSelector((state) => state.cartSlice.wishlist);
+
   const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {

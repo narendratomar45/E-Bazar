@@ -18,16 +18,15 @@ import Loading from "./Components/Loading";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const path = useLocation();
+  const category = path.pathname;
+  const sliceCategory = category.split("/")[1];
   useEffect(() => {
     setTimeout(() => setLoading(false), 500);
   }, []);
   if (loading) {
     return <Loading />;
   }
-  const path = useLocation();
-  const category = path.pathname;
-  const sliceCategory = category.split("/")[1];
-  console.log("Slice category in App.jsx", sliceCategory);
 
   return (
     <div className=" bg-gray-200 text-black">

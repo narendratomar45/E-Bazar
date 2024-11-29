@@ -17,16 +17,15 @@ const Navbar = () => {
   const { wishlist, wishlistQuantity } = useSelector(
     (state) => state.cartSlice
   );
+  console.log("w", wishlistQuantity);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getCartTotal());
   }, [cart, dispatch]);
-  console.log("cart", cartQuantity);
   useEffect(() => {
     dispatch(getWishlistTotal());
   }, [wishlist, dispatch]);
-  console.log("wishlist", wishlistQuantity);
   const handleDropDown = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -42,9 +41,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full h-8 bg-gradient-to-r from-purple-600 to-indigo-500 shadow-md text-center text-white flex items-center justify-center sticky top-0 z-10 max-sm:hidden">
+      <header className="w-full h-8 bg-gradient-to-r from-purple-600 to-indigo-500 shadow-md text-center text-white flex items-center justify-center sticky top-0 z-10 max-sm:hidden">
         Login and Get 20% OFF!
-      </nav>
+      </header>
 
       <nav className="w-full h-16 flex justify-between items-center bg-white shadow-lg px-6 sticky top-8 z-50 max-sm:top-0">
         <div className="flex items-center h-16 w-16">
